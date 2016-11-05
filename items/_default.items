@@ -1,0 +1,17 @@
+Group temp_sensors
+/*
+Number temp_sensor0 "Temperature0 [%s °C]" <temperature> (temp_sensors) {exec="<[tail -1 /sys/bus/w1/devices/10-000802cf2ad2/w1_slave:60000:REGEX(.*?([0-9]+))]"}
+Number temp_sensor1 "Temperature1 [%s °C]" <temperature> (temp_sensors) {exec="<[tail -1 /sys/bus/w1/devices/10-000803156b62/w1_slave:60000:REGEX(.*?([0-9]+))]"}
+Number temp_sensor2 "Temperature2 [%s °C]" <temperature> (temp_sensors) {exec="<[tail -1 /sys/bus/w1/devices/22-000000474941/w1_slave:60000:REGEX(.*?([0-9]+))]"}  
+Number temp_sensor3 "Temperature3 [%s °C]" <temperature> (temp_sensors) {exec="<[tail -1 /sys/bus/w1/devices/22-000000477799/w1_slave:60000:REGEX(.*?([0-9]+))]"}
+Number temp_sensor4 "Temperature4 [%s °C]" <temperature> (temp_sensors) {exec="<[tail -1 /sys/bus/w1/devices/28-000007904e0e/w1_slave:60000:REGEX(.*?([0-9]+))]"}
+Number temp_sensor5 "Temperature5 [%s °C]" <temperature> (temp_sensors) {exec="<[tail -1 /sys/bus/w1/devices/28-000007906a06/w1_slave:60000:REGEX(.*?([0-9]+))]"}
+*/  
+
+Number temp_sensor0 "Temperature6 [%s °C]" <temperature> (temp_sensors) {exec="<[/usr/bin/read_temp_sensor.sh 10-000802cf2ad2:60000:]"}
+Number temp_sensor1 "Temperature6 [%s °C]" <temperature> (temp_sensors) {exec="<[/usr/bin/read_temp_sensor.sh 10-000803156b62:60000:]"}
+Number temp_sensor2 "Temperature6 [%s °C]" <temperature> (temp_sensors) {exec="<[/usr/bin/read_temp_sensor.sh 22-000000474941:60000:]"}
+Number temp_sensor3 "Temperature6 [%s °C]" <temperature> (temp_sensors) {exec="<[/usr/bin/read_temp_sensor.sh 22-000000477799:60000:]"}
+Number temp_sensor4 "Temperature6 [%s °C]" <temperature> (temp_sensors) {exec="<[/usr/bin/read_temp_sensor.sh 28-000007904e0e:60000:]"}
+Number temp_sensor5 "Temperature6 [%s °C]" <temperature> (temp_sensors) {exec="<[/usr/bin/read_temp_sensor.sh 28-000007906a06:60000:]"}
+

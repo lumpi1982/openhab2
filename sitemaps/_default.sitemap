@@ -1,0 +1,13 @@
+sitemap Haus label= "Hauptmenue" { 
+	
+	Frame { 
+		Group item= temp_sensors 
+		Text item=temp_sensor0 
+		Text item= temp_sensor1 
+		Text item= temp_sensor2 
+		Text item=temp_sensor3 
+		Text item= temp_sensor4 
+		Text item= temp_sensor5 
+		Chart item=temp_sensors period=d
+	} 
+}
